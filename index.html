@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Header Styles */
+        .header {
+            padding: 20px;
+            overflow: hidden;
+            border-bottom: 1px solid black;
+        }
+
+        .logo {
+            float: left;
+            font-weight: bold;
+            font-family: 'DotGothic16', sans-serif;
+        }
+
+        .nav {
+            float: right;
+            font-family: 'DotGothic16', sans-serif;
+        }
+
+        .nav a {
+            margin-left: 20px;
+            text-decoration: none;
+            color: black;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            min-height: 500px;
+            background: linear-gradient(to right, white, #f0f0ff);
+            padding: 20px;
+        }
+
+        .hero-text {
+            position: relative;
+            font-size: 48px;
+            font-family: 'DotGothic16', sans-serif;
+            margin-bottom: 30px;
+        }
+
+        .hero-image {
+            position: relative;
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            aspect-ratio: 1;
+            object-fit: cover;
+            margin: 0 auto;
+            display: block;
+        }
+
+        /* Projects Section */
+        .projects {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .project {
+            display: inline-block;
+            width: 100%;
+            margin: 20px 0;
+            vertical-align: top;
+        }
+
+        .project img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .project-title {
+            margin: 10px 0;
+            font-weight: bold;
+        }
+
+        .project-category {
+            color: #666;
+        }
+
+        /* Contact Form */
+        .contact {
+            padding: 20px;
+            background-color: #f9f9f9;
+            text-align: center;
+        }
+
+        .contact form {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .form-row {
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .form-row input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+
+        .form-row textarea {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        .submit-btn {
+            background-color: blue;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        /* Footer */
+        .footer {
+            padding: 20px;
+            border-top: 1px solid black;
+            overflow: hidden;
+            text-align: center;
+
+        }
+
+        .copyright {
+            display: block;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .contact-btn {
+            display: inline-block;
+            padding: 5px 15px;
+            border: 1px solid black;
+            text-decoration: none;
+            color: black;
+        }
+
+        /* Media Queries */
+        @media (min-width: 768px) {
+            .hero {
+                height: 500px;
+                padding: 0;
+            }
+
+            .hero-text {
+                position: absolute;
+                top: 100px;
+                left: 50px;
+                margin-bottom: 0;
+            }
+
+            .hero-image {
+                position: absolute;
+                right: 100px;
+                top: 50px;
+                margin: 0;
+            }
+
+            .project {
+                width: 45%;
+                margin: 2.5%;
+            }
+
+            .form-row {
+                display: flex;
+                justify-content: space-between;
+            }
+
+            .form-row input {
+                width: 48%;
+                margin-bottom: 0;
+            }
+
+            .form-row input[type="email"],
+            .form-row textarea {
+                width: 100%;
+            }
+
+            .submit-btn {
+                width: auto;
+            }
+
+            .footer {
+                text-align: left;
+            }
+
+            .copyright {
+                float: left;
+                margin-bottom: 0;
+            }
+
+            .contact-btn {
+                float: right;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .project {
+                width: 30%;
+                margin: 1.5%;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .header {
+                text-align: center;
+            }
+
+            .logo {
+                float: none;
+                margin-bottom: 10px;
+            }
+
+            .nav {
+                float: none;
+            }
+
+            .nav a {
+                display: inline-block;
+                margin: 5px 10px;
+            }
+
+            .hero-text {
+                font-size: 36px;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">Portfolio</div>
+        <div class="nav">
+            <a href="#about">About Me</a>
+            <a href="#projects">Projects</a>
+            <a href="#blog">Blog</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </div>
+
+    <div class="hero">
+        <h1 class="hero-text">Welcome to<br>My Portfolio</h1>
+        <img src="https://s3-alpha-sig.figma.com/img/f563/6015/b0815b0193bb38c285f1f0e2d1607957?Expires=1735516800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=PzLyIV5voYYb1AuICo4zlvqSbQ2B4Y06Wo0Nj36PBOSzVLzJAAPmE8NW9namQPE3DtLvH6X9r6JKoU9qsjJk34Ki9f5cy5Otsa3935tFOaUZLwcYkpZBfzFdNKyvuXtV43zliYjSjqPX36eZDHa9bAcnhRIbEq901pkayqco8EUofQkTnDfn0Np3lAdJSfZWydChOwufgiZHOBhSIn6poXdN4BuaqxISDk-pVVfaTbCX8k4xG33ldm79VFojJzUpyfsetf-8T14XzxYbKtvYBJwwP4wUTYT31YAkUoa4t1QfbbgtNyNCq1iAEQlnLtoebq1RcQgaqUdBrTI80A~HEA__" alt="Profile" class="hero-image">
+    </div>
+
+    <div class="projects">
+        <div class="project">
+            <img src="https://s3-alpha-sig.figma.com/img/0439/4c50/a2e5f266ab1475c4a99e15c6b8a4f552?Expires=1735516800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Olwr7nA9KzJhgm64cQecKQAALfGe-hA-G-fW1cwdgisOnqTEEh1P0lq6GqfqrJLXqmCMGe2uH2LXZjdHp5EWn6BNltRvhrHoANFASHnwIa2n2MC9WFpCortYtRX838I~aGPvLGaSYDZgDWfBFb4IQOI5FabWbgdyXzChB4--BD3guxHlbE9WFEpz4mYTMrjEbTqXDgyoq2rMoFnsnmHeFwqlv~x~zt3ruWebMp93GOrSV4yVsiEimEkJ2jkNmfOpWhHmTsLIi9rb4zR~oKJudp7QTBJMl25K2AslPHQ0F~oaXJQ4asL7Fy-mH1hzhF348R5B66L2bgqqaOwSsMzJoQ__" alt="Web Design">
+            <div class="project-title">Project 1</div>
+            <div class="project-category">Web Design</div>
+        </div>
+        <div class="project">
+            <img src="https://s3-alpha-sig.figma.com/img/d88d/10de/566c8c4f17fb1ffeef081f66d4d50795?Expires=1735516800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=kWZDs2VJC9I8RWwFi7PYdPGJOyrltBMFgSrJKQTFNjgiWMAgwB1Z2oZSIME3u0U~DZOIQiMdTaaDXH-tzQHNImLqcH~mUs1i1nhCAjDCdQNWjrz-wMRvhC2CJnRs4yqys7vjIcHOaSpHDonD2VQ5SicM3TwI9-tEPyBWFrC3X1JgdqFc1h9K9HEWqpBsM1SOkFwP57rwDLaJF4m32eZdEps-lOSO32bC1p251iOv5Xd3UxX2sHWyg2psZI5yZVbepm2sVTD5BHXOa65W5GmHxTf3ETYfKdKUtmfij8FxsZnTUIZRrME-xkWOWl96YGYw-hmEzmnWxEyfXuh7ttqNhQ__" alt="Graphic Design">
+            <div class="project-title">Project 2</div>
+            <div class="project-category">Graphic Design</div>
+        </div>
+        <div class="project">
+            <img src="https://s3-alpha-sig.figma.com/img/d979/fd6e/10636fcb144845a954e688f69e473b07?Expires=1735516800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=gHqsjZvJmCqpMg2dsswqp2SY4rhuQEaNORc~D9gyKvLCj5Y8dT~vK~mGoB8Q0rwheiVqxP4CvJ9G0vvVSZ8zV4oJM26YnOODH2oykxEiyI8192MLqy4wm5dREzvFpzUagNMfXpzlR~zVdP5GNSI4NiMdBfHb3y3HCbuzZnz68nQatgG0vubpyR8Ig0m-ebbZrsfz6ney0t9ODZFiNpoM-DmDmEBW4NDnn01~gM6t0JQxmZosY1cHaAObE69aLCHIufDzF2KhNHqsp8KmWv31iyz8m6KNifRLH-GSKuJ4A03gX4ulVcsHQKtjwiGZxF6elIoHbHWbCvYl3GD55gyH2A__" alt="App Development">
+            <div class="project-title">Project 3</div>
+            <div class="project-category">App Development</div>
+        </div>
+        <div class="project">
+            <img src="https://s3-alpha-sig.figma.com/img/bba3/ae1c/8ea12829b19cb430ee817e30bd6abc8b?Expires=1735516800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=ZtIrvmfbSlUvn48vrNjQne41g1k3BmEFPbARqi-q7uzAFL-39x5TTxNsKk2Geu4i90NAO~9CMiVI0SxOljeAZvZZm4YZkpCv-0SjJuXrGFR5WgHsJx5EfPgui0rE7v0rI7EeqF3uEzGW9CWKWu11vNXUrDULqOBZksu~7YeM4FYyV59-iWBOF8sDCKLKCaBYzusX2owASbteY-Z4NsDa-G2eHi8Aey5C6MdyHqK3f6H6Pqp9llzuWxrYsMg33gEunLdurf-52neFcbb8Lrg3ORIjorkgT66QIUTvFpEwXTY0wk6AOiAsJKMuCKJhCmXImWuhi2AcNEvveWGcFt~USg__" alt="Photography">
+            <div class="project-title">Project 4</div>
+            <div class="project-category">Photography</div>
+        </div>
+        <div class="project">
+            <img src="https://s3-alpha-sig.figma.com/img/c4d6/4995/48e844ceb88a0d8de8cf56643c524303?Expires=1735516800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=BFQ1SEqEh1-CtuwJVQUa1sjj8mqLdVu7dRdMCDOglRUTQJWDW~xaOHFEsC7bbyttpnytBHocFunSvDYAt3cn6TNyTMYj~cvGfe4YqhpoZHHYO~QeUmqEyjulWZBbLswgEeemBe9ypXvfG04k7~660WYieFVe0SBGPJqr06z1fCzDSDe5zLCvjDO1KLqIaHRmDs6MW5IbcbFyIZqVaALPw5c4m--m1TBRkk62z~RglDx3f0R6nCas6FM6pvL~Am3EbYdqgj6-zM-v~0j1Eh8amJjaKR1yCWMuroo2eSPTDNXBcRzLxzN3saJ7vobsUekfoj3vtB4auw0Knx~TzgTu~w__" alt="Illustration">
+            <div class="project-title">Project 5</div>
+            <div class="project-category">Illustration</div>
+        </div>
+        <div class="project">
+            <img src="https://s3-alpha-sig.figma.com/img/46df/4206/cc349baac11a198c1fc2a2d6618394f1?Expires=1735516800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=akEgWma4Ju5iBkryCJhJochzP8eU5myj6XBYMCtDdZpLt-mJ1RfRUSSe96cWfIYkyYpPi~4uwbSGvlbpNkKvp797LgQSroRroZhyD1V~hdMsnVYeFL6x~7wKx8rcAu-TYmR0Ft-mi1NX7UkWFycgn5s9plYgVFI109y7TPXlPig~PMw8yvP~GDiA7O2vgpmwwTwwsRlWyQxOV5J9tVoIlOpjuX8mNq2tKeoZ0xizYTicoQSCYNYqCXccZ1JSmavpuvLp2BMyJe~odsOPBX7mgn6FPeXe5Mzi4tSPdTIH80v0f96Dg72SILhkPFM75idewrMIpVmgHt1wH2op4aguyw__" alt="Branding">
+            <div class="project-title">Project 6</div>
+            <div class="project-category">Branding</div>
+        </div>
+        <div class="project">
+            <img src="https://s3-alpha-sig.figma.com/img/a53d/481e/08b38cc162139226d6424d6001b0736e?Expires=1735516800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Rh3Rn2llTF7ZpoarK5fqO-iz8tnJdyeMiNf1il0oFNM1bLw1s6YVVLxkGtuXhRGJddtYgopuSMJzKdDRV9fRkFiceJrGMuqqQl9~sNBE97BvNK35j8kId1YKVY1AnZU~TF9TnVcA4c7z618OhGzyBsx2scrNXFZ0-nlpSMlodOCNbICbHtGgUZDR3bLIz5H4exGWreGHBZhI2jugC2Mt-Gy42AmNkGhDS3ZfGjYBHm9FjCQRBH4I-p4ZVES9XhYMkO9CbDOG~o06gAIxSKmZDhfnDxcc3IACGqa66bWRdo~3pYT3b6yBZjVgqkmDPvtPXaAoK~1Dkp~taEVAGLbu1w__" alt="UI/UX Design">
+            <div class="project-title">Project 7</div>
+            <div class="project-category">UI/UX Design</div>
+        </div>
+        <div class="project">
+            <img src="https://s3-alpha-sig.figma.com/img/d5a1/630d/3307046e8add857ac0308205e244aa9d?Expires=1735516800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=dxFDVpxtmzWLknYyFbrsjjEp5w2srdfkWbsk04EvYaacBrnO-JO-r9JbkMh9QDg3cjsHH13eXiCD5x4Q9889oDRQdr~f91p4TiOUXNJYcOP8lEyRGI20LfVSG24k3A6v66GKJ0dHm2UpbN-4w63JWnXjSDv0mhk5sCHoebtXNOmRtjji2KCV7lagxVZW7lHS~jbuqS1jf~RyNYH-Rg0u9P73sRTTRniFB3cguHptfqkPqj0S5UqNHQHvmKTD9s4FuFPPVgKSyMxFYBJ0Lba~W-eM~M2~4X5Vrq4UthxyfnVYr50ZTfO9NDWIEpFBpf3DLUHEu44M86DLFo3mVKNiXQ__" alt="Animation">
+            <div class="project-title">Project 8</div>
+            <div class="project-category">Animation</div>
+        </div>
+        <div class="project">
+            <img src="https://s3-alpha-sig.figma.com/img/2657/15bb/1aec3dfff8229664a09c535315b888fd?Expires=1735516800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=hI5IG8k3PYrteoTlONkHQ1GZ3ziGlggqnuv65Zb-r2PUKzO2V0UDpnHJsRO7dRSLMuQ8hvJVYYN4UZ-uU8AIEq1lSfvuA6ucB7jrnsuihc6U259MuusNyYMWYIvi-ONbCgGKcQUejpQEoPn88nln5CWb6xJRh3Gkz2FVG6KApxv-1noLAWgiAZ6mcfJ09~ZExlLqaas0Gz8SmPSbzNZhyYUT7b3yNYVnxZvdPT1~qPpOUmhwqDDyaN6KpI3uy4XpOqxTlW5vjFQURw52sLAW8HFwTg6y4cEYFkYr6V-BylUZMde1Hgb4hH-iLshUp2BmkVcxDYgw47Zvwir8ykKhJg__" alt="Video Editing">
+            <div class="project-title">Project 9</div>
+            <div class="project-category">Video Editing</div>
+        </div>
+    </div>
+
+    <div class="contact">
+        <h2>Get in Touch</h2>
+        <p>Feel free to reach out for collaborations or just a friendly hello!</p>
+        <form>
+            <div class="form-row">
+                <input type="text" placeholder="First name">
+                <input type="text" placeholder="Last name">
+            </div>
+            <div class="form-row">
+                <input type="email" placeholder="Email">
+            </div>
+            <div class="form-row">
+                <textarea placeholder="Your message" rows="5"></textarea>
+            </div>
+            <button type="submit" class="submit-btn">Submit</button>
+        </form>
+    </div>
+
+    <div class="footer">
+        <div class="copyright">© 2023 My Portfolio</div>
+        <a href="#contact" class="contact-btn">Contact</a>
+    </div>
+</body>
+</html>
+
